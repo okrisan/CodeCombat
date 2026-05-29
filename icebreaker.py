@@ -21,12 +21,22 @@ class Icebreaker:
             print("Invalid type. Type must be 'fracter', 'decoder'. Will be set to 'fracter' by default.")
             type = "fracter"
     
-        self.type = type    
-        self.name = name
-        self.min_damage = min_damage
-        self.max_damage = max_damage
+        self.__type= type    
+        self.__name = name
+        self.__min_damage = min_damage
+        self.__max_damage = max_damage
+
+    def get_type(self):
+        return self.__type
+    def get_name(self):
+        return self.__name
+    def get_min_damage(self):
+        return self.__min_damage
+    def get_max_damage(self):        
+        return self.__max_damage
+
 
     def get_damage(self)->int:
-        return random.randint(self.min_damage, self.max_damage)
+        return random.randint(self.__min_damage, self.__max_damage)
     def __str__(self):
-        return f"{self.name} ({self.type}): {self.min_damage}-{self.max_damage} damage"
+        return f"{self.__name} ({self.__type}): {self.__min_damage}-{self.__max_damage} damage"

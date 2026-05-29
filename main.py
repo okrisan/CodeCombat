@@ -31,11 +31,11 @@ if __name__=="__main__":
 
 
         if not runner2.is_alive():
-            print(f"{runner2.handle} has been defeated!")
+            print(f"{runner2.get_handle()} has been defeated!")
             break
         
         if not runner1.is_alive():
-            print(f"{runner1.handle} has been defeated!")
+            print(f"{runner1.get_handle()} has been defeated!")
             break
 
     print("--- Battle End ---")
