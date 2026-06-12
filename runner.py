@@ -69,7 +69,8 @@ class Runner:
         return self.__power
     def get_finesse(self):
         return self.__finesse
-    
+    def get_icebreaker(self):
+        return self.__icebreaker
     
     def __str__(self):
         return f"{self.__handle} (integrity {self.__integrity}/{self.__max_integrity})"
